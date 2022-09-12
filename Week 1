@@ -1,0 +1,43 @@
+'''
+This code will take two coordinates from the user inputs and will calculate the Euclidean distance and the Manhanttan distance between the two coordinates.
+Code written by Matthew Osborne and Dipto Sarkar.
+'''
+import math
+# Take the input from the user 
+print("Enter two sets of coodinates")
+x1 = float(input("Enter x1: "))
+y1 = float(input("Enter y1: "))
+x2 = float(input("Enter x2: "))
+y2 = float(input("Enter y2: "))
+# Difference of x and y will be used in both equations
+diff_x = x1-x2
+diff_y = y1-y2
+# Euclidean distance is the simplest distance between two points
+e_dist = math.sqrt(math.pow(diff_x,2) + math.pow(diff_y,2))
+print("The Euclidean distance is ", e_dist)
+# Manhattan distance is the distance between two points scrictly on a horizontal and vertical space
+m_dist = math.abs(diff_x) + math.abs(diff_y)
+print("The Manhattan distance is ", m_dist)
+
+
+
+'''
+This set of code is used for taking coodinates in terms of decimal degrees and and will calculate the Great Circle distance
+Code written by Matthew Osborne
+'''
+import math
+# Only one defined variable, r, which is the radius of the Earth.
+float r = 6371.009
+# Take the input from the user
+print(Enter two sets of coordinates)
+a1 = float(input("Enter a1: "))
+b1 = float(input("Enter b1: "))
+a2 = float(input("Enter a2: "))
+b2 = float(input("Enter b2: "))
+# Delta a of a will be used for delta c
+del_a = math.abs(a1-a2)
+# Delta c is does the heavy lifting in the Great Cirlce equation
+del_c = math.acos((math.sin(b1)*math.sin(b2))+(math.cos(b1)*math.cos(b2)*del_a))
+# The Great Circle distance is the shortest distance from two points on a globe
+gc_dist = r*del_c
+print("The Great Circle distance is ", gc_dist)
