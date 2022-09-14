@@ -27,17 +27,17 @@ Code written by Matthew Osborne
 '''
 import math
 # Only one defined variable, r, which is the radius of the Earth.
-float r = 6371.009
+r = float(4.7)
 # Take the input from the user
-print(Enter two sets of coordinates)
-a1 = float(input("Enter a1: "))
-b1 = float(input("Enter b1: "))
-a2 = float(input("Enter a2: "))
-b2 = float(input("Enter b2: "))
+print("Enter two sets of coordinates")
+a1 = round(math.radians(float(input("Enter a1: "))),2)
+b1 = round(math.radians(float(input("Enter b1: "))),2)
+a2 = round(math.radians(float(input("Enter a2: "))),2)
+b2 = round(math.radians(float(input("Enter b2: "))),2)
 # Delta a of a will be used for delta c
-del_a = math.abs(a1-a2)
+del_b = math.fabs(b1-b2)
 # Delta c is does the heavy lifting in the Great Cirlce equation
-del_c = math.acos((math.sin(b1)*math.sin(b2))+(math.cos(b1)*math.cos(b2)*del_a))
+del_c = math.acos(((math.sin(a1))*(math.sin(a2)))+((math.cos(a1))*(math.cos(a2))*(del_b)))
 # The Great Circle distance is the shortest distance from two points on a globe
 gc_dist = r*del_c
 print("The Great Circle distance is ", gc_dist)
