@@ -27,7 +27,7 @@ Code written by Matthew Osborne
 '''
 import math
 # Only one defined variable, r, which is the radius of the Earth.
-r = float(4.7)
+r = float(6371.009)
 # Take the input from the user
 print("Enter two sets of coordinates")
 a1 = round(math.radians(float(input("Enter a1: "))),2)
