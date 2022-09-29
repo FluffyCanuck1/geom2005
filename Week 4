@@ -1,0 +1,77 @@
+# 4.2 Problem. The problem asks to code a while loop that will produce a sum of a sequence 1-50.
+sum = 0
+rate = 1
+while(rate>50):
+  sum = sum + rate
+  rate = rate + 1
+print("The sum of the sequence is ", sum)
+
+
+
+# 4.3 Problem. The problem asks to code a for loop that will produce a sum of a sequence 1-50
+sum = 0
+for i in range(1, 51):
+  sum = sum + i
+print(The sum of the sequence is ", sum)
+
+
+
+# 4.4 Problem. The problem asks to code a for loop to calculate the mean for a dataset that is provided.
+dataset = [5, 8, 12, 56, 3, 36, 48, 100]
+sum = 0
+for i in range dataset:
+  sum = sum + i
+mean = sum / dataset.count()
+print("The mean for the dataset is ", mean)
+
+
+# 4.5 Problem. The problem asks to use nested for loops to construct and calculate a mutiplication table of 10x10
+product = 0
+for i in range(1,11):
+  for j in range(1,11):
+    product = i*j
+    print(i, 'x', j, '=', product)
+
+
+
+# 4.6 Problem. The problem asks to use nested loops with lists to calculate the mean for the yearly data provided.
+temp_data = [[-9.2, -8.7, -2.8, 7.0, 14.8, 19.9, 20.3, 22.6, 16.6, 10.0, 5.2, -0.7],
+[-4.3, -5.9, -2.6, 7.1, 11.5, 17.5, 22.1, 21.2, 18.1, 7.9, 0.8, -5.4],
+[-12.6, -11.2, -3.4, 4.3, 13.5, 19.0, 21.0, 21.5, 17.2, 7.6, 2.8, -4.4],
+[-14.7, -7.3, 0.5, 6.3, 13.6, 17.6, 20.8, 18.9, 16.7, 9.2, 2.4, -8.1],
+[-11.5, -6.7, -3.3, 7.3, 11.7, 21.4, 22.6, 21.7, 17.7, 10.1, 2.8, -5.7]]
+for year in temp_data:
+  sum = 0
+  for monthly in year:
+    sum = sum + monthly
+mean = sum / monthly.count()
+print(mean)
+
+
+
+# 4.7 Problem. The problem asks to use conditional statements and list methods to construct a list of levels of saline water.
+salts_ppm = [4681, 34276, 1722, 6771, 34934, 11525, 4366, 10432, 987, 1385]
+my_list = []
+for data in salts_ppm:
+  if(data<1000):
+    my_list.append("Fresh Water")
+  elif(data>=1000 and 3000>data):
+    my_list.append("Sightly Saline Water")
+  elif(data>=3000 and 10000>data):
+    my_list.append("Moderately Saline Water")
+  else:
+    my_list.append("Highly Saline Water")
+print(my_list)
+
+
+
+# 4.8 Problem. The problem asks to use methods to edit a list provided to convert temperatures from Celcius and Kelvin and then print the average.
+temp_data = [25.6, -8.61, 2.59, -20.37, -18.54, 10.25, -28.29, -14.01, 10.17, -13.35]
+temp_sum = 0
+for i in temp_data:
+  temp_data[i] = temp_data[i] + 273.15
+  temp_sum = temp_sum + i
+mean = temp_sum/len(temp_data)
+print(temp_data)
+print(mean)
+
